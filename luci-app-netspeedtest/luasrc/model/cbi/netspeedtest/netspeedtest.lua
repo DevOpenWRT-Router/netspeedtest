@@ -1,11 +1,11 @@
 -- Copyright 2018 sirpdboy (herboy2008@gmail.com)
 require("luci.util")
 local o,t,e
- 
+
 if luci.sys.call("pidof iperf3 >/dev/null") == 0 then
-	status = translate("<strong><font color=\"green\">iperf3 服务端运行中</font></strong>")
+	status = translate("<strong><font color=\"green\">iperf3 server is running</font></strong>")
 else
-	status = translate("<strong><font color=\"red\">iperf3 服务端已停止</font></strong>")
+	status = translate("<strong><font color=\"red\">iperf3 server has stopped</font></strong>")
 end
 
 o = Map("netspeedtest", "<font color='green'>" .. translate("netspeedtest") .."</font>",translate( "Network speed diagnosis test (including intranet and extranet)") )
